@@ -1,0 +1,23 @@
+{% load static %}
+
+<html>
+    <head>
+        <title>Wordcount</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/Wordcount.css' %}">
+        <link href="https://fonts.googleapis.com/css?family=Gugi&amp;subset=korean" rel="stylesheet">
+    </head>
+    <body>
+
+        <h1> 내가 쓴 글은 총 몇 개의 단어일까? </h1>
+
+        <a href="{%url 'about' %}">ABOUT</a>
+
+        <form action="{%url 'result'%}">
+            <textarea cols="40" rows="10" name="fulltext"></textarea>
+            <br>
+            <input class="btn btn-primary" type="submit" value="Count!" rows="10">
+        </form>
+    </body>
+</html>

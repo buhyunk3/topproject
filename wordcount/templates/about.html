@@ -1,0 +1,20 @@
+{% load static %}
+
+<html>
+    <head>
+        <title>About</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/Wordcount.css' %}">
+        <link href="https://fonts.googleapis.com/css?family=Gugi&amp;subset=korean" rel="stylesheet">
+    </head>
+    <body>
+        <h1> ABOUT </h1>
+
+        <p>Wordcount:내가 쓴 글의 단어수를 세주는 페이지입니다</p>
+
+        <a href="{%url 'home' %}">Home으로 돌아가기</a>
+
+    </body>
+</html>
+

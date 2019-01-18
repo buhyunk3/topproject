@@ -1,0 +1,30 @@
+{% load static %}
+
+<html>
+    <head>
+        <title>Result</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/Wordcount.css' %}">
+        <link href="https://fonts.googleapis.com/css?family=Gugi&amp;subset=korean" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Sunflower:300&amp;subset=korean" rel="stylesheet">
+    </head>
+    <body>
+
+        <h1>당신이 입력한 텍스트는 {{total}} 개의 단어로 구성되어 있습니다.</h1>
+
+        <a href="{% url 'home' %}"> 다시하기 </a>
+
+        <h2>입력한 텍스트 : </h2>
+        {{full}}
+
+        <h2>단어 카운트 : </h2>
+        {% for word, howmany in dictionary %}
+
+        {{word}} : {{howmany}}
+        <br>
+        {%endfor%}
+
+    </body>
+</html>
+
